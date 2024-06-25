@@ -1,9 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body></body>
+    <title>Record Store</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Tutorship</li>
+                <li>Studio Services</li>
+                <li>Record Store</li>
+            </ul>
+            <section class="basket-section">
+                <img src="REVMA LOGO FIXED.jpg" alt="Logo" class="logo">
+                <div class="basket-container">
+                    <h1>Basket 🧺</h1>
+                    <div id="basket-container"></div>
+                    <p id="total-price">Total €0.00</p>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <section class="latest">
+        <h1>Latest Releases</h1>
+        <div class="waveform">
+            <canvas id="waveformCanvas" width="800" height="100"></canvas>
+        </div>
+    </section>
+    <section class="items">
+        <div id="items-container" class="records-container">
+            <div class="record-item">
+                <img src="rawax.jpg" alt="Rawaxs025" class="record-image">
+                <div class="record-details">
+                    <h3 class="record-title">Lee Burton - Zero G</h3>
+                    <h4 class="record-label">(RAWAX s025)</h4>
+                </div>
+                <ul class="tracklist">
+                    <li><a href="#" onclick="playTrack('Party Crusher.mp3', 'audio-player-1')">Party Crusher</a></li>
+                    <li><a href="#" onclick="playTrack('Nismo.mp3', 'audio-player-1')">Nismo</a></li>
+                    <li><a href="#" onclick="playTrack('VOT.mp3', 'audio-player-1')">VOT</a></li>
+                    <li><a href="#" onclick="playTrack('Zero G.mp3', 'audio-player-1')">Zero G</a></li>
+                </ul>
+                <div class="audio-player">
+                    <audio id="audio-player-1" controls>
+                    </audio>
+                </div>
+                <p class="prices">€13.99</p>
+                <button onclick="AddtoBasket('Zero G (RAWAXs025)', '€13.99')" class="buttons">Add to Basket 🧺</button>
+            </div>
+        </div>
+    </section>
+            <div class="record-item">
+                <img src="UpTheStuss.jpg" alt="UTS16" class="record-image">
+                <div class="record-details">
+                    <h3 class="record-title">Lee Burton - Sinewaves</h3>
+                    <h4 class="record-label">(Up The Stuss 16)</h4>
+                </div>
+                <ul class="tracklist">
+                    <li><a href="#" onclick="playTrack('Sinewaves.mp3', 'audio-player-2')">Sinewaves</a></li>
+                    <li><a href="#" onclick="playTrack('Burning.mp3', 'audio-player-2')">Burning</a></li>
+                    <li><a href="#" onclick="playTrack('ITICF.mp3', 'audio-player-2')">ITICF</a></li>
+                    <li><a href="#" onclick="playTrack('Love Motion.mp3', 'audio-player-2')">Love Motion</a></li>
+                </ul>
+                <div class="audio-player">
+                    <audio id="audio-player-2" controls>
+                        <source id="track5" src="audio1.mp3" type="audio/mpeg">
+                        <source id="track6" src="audio2.mp3" type="audio/mpeg">
+                        <source id="track7" src="audio3.mp3" type="audio/mpeg">
+                        <source id="track8" src="audio4.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <p class="prices">€15.99</p>
+                <button onclick="AddtoBasket('Sinewaves (UTS16)', '€15.99')" class="buttons">Add to Basket 🧺</button>
+            </div>
+            <div class="record-item">
+                <img src="Raum...Musik.jpg" alt="Musik116" class="record-image">
+                <div class="record-details">
+                    <h3 class="record-title">Lee Burton - Supraterritorial</h3>
+                    <h4 class="record-label">(Raum...Musik 116)</h4>
+                </div>
+                <ul class="tracklist">
+                    <li><a href="#" onclick="playTrack('Gaga.mp3', 'audio-player-3')">Gaga</a></li>
+                    <li><a href="#" onclick="playTrack('Supraterritorial.mp3', 'audio-player-3')">Supraterritorial</a></li>
+                    <li><a href="#" onclick="playTrack('TIAI.mp3', 'audio-player-3')">TIAI</a></li>
+                </ul>
+                <div class="audio-player">
+                    <audio id="audio-player-3" controls>
+                        <source id="track9" src="audio1.mp3" type="audio/mpeg">
+                        <source id="track10" src="audio2.mp3" type="audio/mpeg">
+                        <source id="track11" src="audio3.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <p class="prices">€14.99</p>
+                <button onclick="AddtoBasket('Supraterritorial (Musik116)', '€14.99')" class="buttons">Add to Basket 🧺</button>
+            </div>
+            <div class="record-item">
+                <img src="Caposile Music.jpg" alt="Cpsls002" class="record-image">
+                <div class="record-details">
+                    <h3 class="record-title">The Sound Of Garden V.A</h3>
+                    <h4 class="record-label">(Caposile Music 002)</h4>
+                </div>
+                <ul class="tracklist">
+                    <li><a href="#" onclick="playTrack('Amino.mp3', 'audio-player-4')">Amino</a></li>
+                    <li><a href="#" onclick="playTrack('Track2.mp3', 'audio-player-4')">Track 2</a></li>
+                    <li><a href="#" onclick="playTrack('Track3.mp3', 'audio-player-4')">Track 3</a></li>
+                    <li><a href="#" onclick="playTrack('Track4.mp3', 'audio-player-4')">Track 4</a></li>
+                </ul>
+                <div class="audio-player">
+                    <audio id="audio-player-4" controls>
+                        <source id="track13" src="audio1.mp3" type="audio/mpeg">
+                        <source id="track14" src="audio2.mp3" type="audio/mpeg">
+                        <source id="track15" src="audio3.mp3" type="audio/mpeg">
+                        <source id="track16" src="audio4.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <p class="prices">€16.99</p>
+                <button onclick="AddtoBasket('The Sound Of Garden (Cpsls002)', '€16.99')" class="buttons">Add to Basket 🧺</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="socials">
+            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" /></a>
+            <a href="#"><img src="https://st-aug.edu/wp-content/uploads/2021/09/soundcloud-logo-soundcloud-icon-transparent-png-1.png" /></a>   
+            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/archive/d/d8/20240301130827%21ResidentAdvisor_logo.png" /></a>
+            <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAhFBMVEUIZv/w9v////8AZP8AWf/5/f/s8/+Pq/+wxv8AYP/2+//8//+Dpf8AXf/y+P8AYv8AUf+Mp/8AVP8ATP/h6f/K2f/E0v+jvP+wwv9gjP+bsv98of/m7/8/eP9Cff+duP9vl//T3v9Vhv82b/8AQv82c/+7zP9mkf8Uav8AR//W4/98nP8RayGgAAAEr0lEQVR4nO3daZOaMBjA8ZCEI2EJiCCuN1qP6vf/fsV11b3EhQafJ07+LzrtdNzhN+EmuIReypggxiVYdhWQy98Gf2LoJWtT/GfzDeMO+9CL1bb+0P2McYccepnaxwv3EyYgRq5jp2IWfMTkawO3/WtinV8x2WsEvTz/V/SanTFyZLil0ozkOyY3eYM5FZP8hHFeDN6TneNj7w2Tp9BLoqM0P2LU+AkGphqag6owWcSgF0RHjGcVJkigl0NPybDCLI0+Xl4TM0rkkwxMNTSKlMaeLX+tX5LiKfZlx3hBxsafypyLxuRZtv9qD7Aka+hl0BZbQS+BzWaz2Ww2mw1B7PKHycURT9Mk5VEUcZ4mVWma8qpICKPurAqeRLOFXwSD/NxgsAmGxWj0ctgupzveN+RaUaTJzB9k2cRzlJKXlKr+6XieN5lMsixbmHCxGP1dFxP1nvMldYm+oMcwkW731P2u+FaIHcMEW2ShvAsxAROz1zy8PyZGYKLp3HF/ScGOSRsMC3ZMesh+Pyy4MSz1vd9t+AZgKkuDVQw3Ju01teDF8O2kqQUtRszKRts+Zky8C8LGFqQYJsay8UqGFRNP9812yqgxoxYrGVJMvG68V8aL4XPaxoIU02brR4rhh3YDgxLzt9WuDCcm3rUcGIwY7jc/kUGLScqWaxlCTMycX+zLlHTdr/s8Dx8m2t6/QybdSR4UI7/nn+qd8mfY7jfz0T2LkqW/ne0E/xa2gSHJ5g5Geb1pHAkjnmgk+3qM8mbCDEl1KcOyegydGvLgghyvl+sxoW/QvNDotfZGhlIGWUi0qMWERk0L5ePaCzOzZlLz2nt/Su4M2ZG9xWtvysq9UU/M72By6OVrVD3G3Zg0MPcwAfTyNcpisGYxWLMYrFkM1iwGaxaDNYvBmsVgzUgMu9E9DItvfbL6H2QWVj9lrhqZ2xiw2wOiR+XP1T9qUjc+dYwugJ41iZdWs2NqC6HudnaAOT64eRqM3E+fZzWT+fp5MG6wAtqfdYAJ5zCUbjA9qFkAXaxmC6gnt/oxytk+ESYDe0KoHyNLqGNmF5gN1GGmA4wbgD271Y8J52DXMx2MjA82p0Y7Rjlw34KlHzMBO2bqx8g93EQU/Zgc7DDTAWazApttqh3jBnAzZ/WPDOBENN0Y5fhPhJkAfguudkwGdjXTAQbwMFNh2r4k83OyBLsAqDA+le6P1b9vpn7+lAxzsHPmo+b7awlv9WsnnLrBjY9xlNPQjXzYdCuLwZrFYM1isGYxWLMYrFkM1iwGaxaDNYvBmsVgzWKwZjFYsxisWQzWLAZrFoM1i8GaxWDNYrBmMVizGKxZDNYsRkOsi9/bDIVZdfEbtYEwYkkO+uffAWGiAylS7T8VCMPnpOzr/6kwmH5O1PNgHEL1v7MCgxEzSqj+jQYGkxYVJkt1T40GwmQVxlnofjcCBMMXToWhpe4vtgbBJCU9YryD5qGBwPCF94ahOdH7dgQAJmY5PWGU5rdwATCRr94xNFtq1TweEy0zesbQwUrnkfPhGLEa0CvGLZjGzebRmDguwg8YKkca92iPxnBf0o8Y6vr6TjgfjOn3XPoZQ2mhTfNYTL+4EP4BqlFf0ahKkj0AAAAASUVORK5CYII=" /></a>
+        </div>
+    </footer>
+</body>
 </html>
