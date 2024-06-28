@@ -33,7 +33,17 @@ nav ul li {
 }
 
 .basket-container {
-    text-align: right;
+    text-align: center;
+    align-items:baseline;
+}
+
+#checkout-button{
+    background-color:#333333;
+    color: rgb(231, 231, 231);
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+    cursor: pointer; 
+    height: 3vh;
 }
 
 .latest {
@@ -60,10 +70,7 @@ nav ul li {
     
 }
 
-.latest p {
-    font-size: 18px;
-    margin-bottom: 40px;
-}
+
 
 .buttons {
     background-color:#333333;
@@ -114,7 +121,6 @@ nav ul li {
 }
 
 .tracklist {
-    ;
     list-style: none;
     margin: 0px 100px 0px 0px;
     text-align: left;
@@ -122,11 +128,6 @@ nav ul li {
     width: 150px;
 }
 
-.tracklist li {
-    text-align: left;
-    margin: 0px 0;
-    color: #333333;
-}
 
 .record-item .audio-player {
     flex: 1;
@@ -163,4 +164,94 @@ footer {
 .socials img {
     width: 30px;
     margin: 0 10px;
+}
+
+
+
+.checkout-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.checkout-item .item-name {
+    flex: 2;
+}
+
+.checkout-item .item-quantity,
+.checkout-item .item-price {
+    flex: 1;
+    text-align: right;
+}
+
+#paypal-button {
+    background-color: #0070ba;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.quantity-control {
+    background-color: #333333;
+    color: rgb(231, 231, 231);
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+
+#checkout-total-price {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.checkout-section {
+    background-color:rgb(215, 167, 215);
+    padding: 20px;
+    flex: 1;
+    height: 72vh;
+    display: flex;
+    flex-direction: column;
+    align-items: ;
+    text-align: center;
+}
+
+
+.button {
+  background-color:#333333;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+
+.checkout-section {
+  padding: 20px;
+}
+
+.checkout-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.item-quantity {
+  display: flex;
+  align-items: center;
 }
