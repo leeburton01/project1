@@ -28,11 +28,12 @@ nav ul li {
     height: 10vh;
 }
 
-.basket-section .logo {
-    height: 50px; 
+.basket-section .logo { 
+    width: 250px;
 }
 
 .basket-container {
+    margin: -18px 0px 0px 0px;
     text-align: center;
     align-items:baseline;
 }
@@ -43,7 +44,8 @@ nav ul li {
     font-size: 15px;
     transition: background-color 0.3s ease;
     cursor: pointer; 
-    height: 3vh;
+    width: 200px;
+    height: 4vh;
 }
 
 .latest {
@@ -150,6 +152,8 @@ audio {
 }
 
 .basket-section {
+    
+    height: 14vh;
     padding: 0 50px;
     text-align: end;
 }
