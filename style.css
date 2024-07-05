@@ -10,12 +10,30 @@ header {
     padding: 20px 0px 0px 0px;
 }
 
+nav a {
+    color:rgb(231, 231, 231) ;
+    text-decoration: none;
+}
+
+nav a:visited {
+    color: rgb(231, 231, 231) ;
+}
+
+nav a:hover {
+    color:rgb(215, 167, 215);
+}
+
+nav a:active {
+    color: rgb(231, 231, 231) ;
+}
+
 nav ul {
     text-align: center;
     color: rgb(231, 231, 231);
 }
 
 nav ul li {
+    color: rgb(231, 231, 231) ;
     display: inline-table;
     padding: 10px 40px;
 }
