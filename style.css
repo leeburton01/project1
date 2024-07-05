@@ -33,7 +33,7 @@ nav ul li {
 }
 
 .basket-container {
-    margin: -18px 0px 0px 0px;
+    margin: -18px 30px 0px 0px;
     text-align: center;
     align-items:baseline;
 }
@@ -42,30 +42,26 @@ nav ul li {
     background-color:#333333;
     color: rgb(231, 231, 231);
     font-size: 15px;
+    border-radius: 0%;
     transition: background-color 0.3s ease;
     cursor: pointer; 
-    width: 200px;
+    width: 160px;
     height: 4vh;
+}
+
+#checkout-button:hover {
+    background-color: rgb(215, 167, 215);
 }
 
 .latest {
     text-align: center;
     color: rgb(231, 231, 231); 
-    position: relative; 
 }
 
-.latest .waveform {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    opacity: 0.3; 
-}
 
 .latest h1 {
     font-size: 40px;
-    margin: 10px 0px 10px 0px;
+    margin: 20px 0px 10px 0px;
     padding-bottom: 40px;
     padding-top: 10px;
     border-bottom: 1px solid rgb(231, 231, 231);
@@ -76,7 +72,7 @@ nav ul li {
 
 .buttons {
     background-color:#333333;
-    border-radius: 50%;
+    border-radius: 0%;
     color: rgb(231, 231, 231);
     padding: 10px 20px;
     margin: 0px 0px 0px 20px;
@@ -258,4 +254,12 @@ footer {
 .item-quantity {
   display: flex;
   align-items: center;
+}
+
+
+.service-description{
+    text-align: center;
+    font-size: large;
+    margin: 0px 200px 0px 0px;
+    width: 300px;
 }

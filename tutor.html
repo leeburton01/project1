@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Services</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./tutor.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Record Store</a></li>
+                <li>Tutorship</li>
+                <li>Studio Services</li>
+                <li>About</li>
+            </ul>
+            <section class="basket-section">
+                <img src="REVMA LOGO FIXED.jpg" alt="Logo" class="logo">
+                <div class="basket-container">
+                    <h4>Basket 🧺</h4>
+                    <div id="basket-container"></div>
+                    <p id="total-price">Total €0.00</p>
+                    <button id="checkout-button" onclick="goToCheckout()">Checkout 🚚</button>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <section class="latest">
+        <h1>Studio Services & Online Lessons</h1>
+    </section>
+    <section>
+        <div>
+            <div class="record-item">
+                <img src="re303.jpg" alt="private-lesson" class="record-image">
+                <div class="record-details">
+                    <h3 class="record-title">1-1 Online Private Lesson</h3>
+                    <h4 class="record-label">(1 hour)</h4>
+                </div>
+                <div class="service-description">
+                    <h6>Learn anything you need to know about Beat Making, Composition & Arrangement, Sound Design, Mixing & Mastering Techniques</h6>
+                </div>
+                <p class="prices">€40</p>
+                <button onclick="addToBasket('1-1 Online Private Lesson (1 hour)', '€40')" class="buttons">Add to Basket 🧺</button>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="record-item">
+            <img src="roland juno 106.jpg" alt="mixing-session" class="record-image">
+            <div class="record-details">
+                <h3 class="record-title">Mixing Session</h3>
+                <h4 class="record-label">(1 track)</h4>
+            </div>
+            <div class="service-description">
+                    <h6> High quality analogue mixing. You will receive a premaster -6db's file for your release and a maximized version of your track for your demo and DJ sets</h6>
+                </div>
+            
+           
+            <p class="prices">€130</p>
+            <button onclick="addToBasket('Mixing Session (1 track)', '€130')" class="buttons">Add to Basket 🧺</button>
+        </div>
+        <div class="record-item">
+            <img src="IMG_1622.jpg" alt="Mastering" class="record-image">
+            <div class="record-details">
+                <h3 class="record-title">Mastering</h3>
+                <h4 class="record-label">(1 track)</h4>
+            </div>
+            <div class="service-description">
+                    <h6> High quality analogue mastering. Bring your tracks to the volume level industry standards</h6>
+                </div>
+            
+        
+            <p class="prices">€60</p>
+            <button onclick="addToBasket('Mastering (1 track)', '€14.99')" class="buttons">Add to Basket 🧺</button>
+        </div>
+       
+    </section>
+     <footer>
+        <div class="socials">
+            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"></a>
+            <a href="#"><img src="https://st-aug.edu/wp-content/uploads/2021/09/soundcloud-logo-soundcloud-icon-transparent-png-1.png"></a>
+            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/archive/d/d8/20240301130827%21ResidentAdvisor_logo.png"></a>
+        </div>
+    </footer>
+</body>
+</html>

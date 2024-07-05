@@ -5,9 +5,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let totalPrice = 0;
 
+  function calculateDiscountedPrice(price, quantity) {
+    let discount = 0;
+    if (quantity >= 4 && quantity <= 7) {
+      discount = 0.1;
+    } else if (quantity >= 8 && quantity <= 11) {
+      discount = 0.2;
+    } else if (quantity >= 12) {
+      discount = 0.3;
+    }
+    return price * quantity * (1 - discount);
+  }
+
   basketItems.forEach((item, index) => {
     const itemElement = document.createElement("div");
     itemElement.className = "checkout-item";
+    const discountedPrice = calculateDiscountedPrice(
+      item.price,
+      item.quantity
+    ).toFixed(2);
     itemElement.innerHTML = `
       <span class="item-name">${item.name}</span>
       <span class="item-quantity">
@@ -15,13 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
           ${item.quantity}
           <button class="quantity-control button" data-index="${index}" data-action="increase">+</button>
       </span>
-      <span class="item-price">Price: €${(item.price * item.quantity).toFixed(
-        2
-      )}</span>
+      <span class="item-price">Price: €${discountedPrice}</span>
       <button class="remove-item button" data-index="${index}">Remove</button>
     `;
     checkoutItemsContainer.appendChild(itemElement);
-    totalPrice += item.price * item.quantity;
+    totalPrice += parseFloat(discountedPrice);
   });
 
   totalPriceElement.innerText = `Total €${totalPrice.toFixed(2)}`;
@@ -55,3 +69,5 @@ document.addEventListener("DOMContentLoaded", () => {
     alert("Redirecting to PayPal for payment...");
   });
 });
+
+
